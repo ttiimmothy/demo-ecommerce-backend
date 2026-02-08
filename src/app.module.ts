@@ -36,6 +36,7 @@ import { WebhookModule } from './webook/webhook.module';
           origin: [
             'http://localhost:3001',
             'https://demoecommerces.vercel.app',
+            'https://stripelearnging.vercel.app'
           ],
           credentials: true,
         },
