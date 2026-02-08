@@ -32,14 +32,14 @@ import { WebhookModule } from './webook/webhook.module';
         // },
         // implment express response (cookies)
         context: ({ req, res }) => ({ req, res }),
-        cors: {
-          origin: [
-            'http://localhost:3001',
-            'https://demoecommerces.vercel.app',
-            'https://stripelearnging.vercel.app'
-          ],
-          credentials: true,
-        },
+        // cors: {
+        //   origin: [
+        //     'http://localhost:3001',
+        //     'https://demoecommerces.vercel.app',
+        //     'https://stripelearnging.vercel.app'
+        //   ],
+        //   credentials: true,
+        // },
         introspection: true
       }),
     }),
