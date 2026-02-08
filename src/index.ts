@@ -10,12 +10,10 @@ async function bootstrap() {
   // middleware
   const configService = app.get(ConfigService);
   app.use(cookieParser());
-  app.use(
-    cors({
-      origin: ['http://localhost:3001', 'https://demoecommerces.vercel.app', 'https://stripelearning.vercel.app', configService.get("FRONTEND_URL")],
-      credentials: true,
-    }),
-  );
+  app.enableCors({
+    origin: ['http://localhost:3001', 'https://demoecommerces.vercel.app', 'https://stripelearning.vercel.app', configService.get("FRONTEND_URL")],
+    credentials: true,
+  })
   // app.setGlobalPrefix('/api/v1');
   const port = 3002;
   await app.listen(port);
