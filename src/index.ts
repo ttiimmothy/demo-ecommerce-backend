@@ -17,7 +17,7 @@ async function bootstrap() {
     }),
   );
   // app.setGlobalPrefix('/api/v1');
-  const port = configService.get('PORT') || 3002;
+  const port = 3002;
   await app.listen(port);
   console.log(`Server is running on port ${port}`);
   return app;
