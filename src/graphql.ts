@@ -14,7 +14,7 @@ async function bootstrap() {
       logger: ['error', 'warn'],
     })
     app.enableCors({
-      origin: 'https://stripelearning.vercel.app',
+      origin: ['https://demoecommerces.vercel.app', 'https://stripelearning.vercel.app'],
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
       allowedHeaders: 'X-Requested-With, Content-Type, Accept, Authorization',
       credentials: true,
