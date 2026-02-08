@@ -12,7 +12,7 @@ async function bootstrap() {
   app.use(cookieParser());
   app.use(
     cors({
-      origin: ['http://localhost:3001', 'https://demoecommerces.vercel.app', 'https://stripelearning.vercel.app', configService.get("FRONTEND_URL")],
+      origin: ['http://localhost:3001', 'https://stripelearning.vercel.app', configService.get("FRONTEND_URL")],
       credentials: true,
     }),
   );
