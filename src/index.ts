@@ -8,15 +8,15 @@ import {VercelRequest, VercelResponse} from "@vercel/node";
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // middleware
+  const configService = app.get(ConfigService);
   app.use(cookieParser());
   app.use(
     cors({
-      origin: ['http://localhost:3001', 'https://demoecommerces.vercel.app'],
+      origin: ['http://localhost:3001', 'https://demoecommerces.vercel.app', configService.get("FRONTEND_URL")],
       credentials: true,
     }),
   );
   // app.setGlobalPrefix('/api/v1');
-  const configService = app.get(ConfigService);
   const port = configService.get('PORT') || 3002;
   await app.listen(port);
   console.log(`Server is running on port ${port}`);
